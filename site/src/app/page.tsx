@@ -101,7 +101,7 @@ export default function Home() {
               <br />
               <p>
                 ... and likely many more ideas we haven't come up with yet. Use
-                this however you want! It's designed to be super opinionated but also flexible. It's liberating in a sense that you don't really need to make any choices - we do that for you - but you still get your own ideas down.
+                this however you want!
               </p>
             </div>
           </div>
