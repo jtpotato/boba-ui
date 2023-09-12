@@ -3,17 +3,15 @@ import BentoRow from "@/boba-components-src/BentoRow";
 import Card from "@/boba-components-src/Card";
 import Center from "@/boba-components-src/Center";
 import Chip from "@/boba-components-src/Chip";
-import ClickSwitch from "@/boba-components-src/ClickSwitch";
 import GlitchyTextOnScroll from "@/boba-components-src/GlitchyTextOnScroll";
 import MajorSegment from "@/boba-components-src/MajorSegment";
 import Row from "@/boba-components-src/Row";
 
 import "@/boba-components-src/StretchInside.css";
-import Underline from "@/boba-components-src/Underline";
 
 export default function Home() {
   return (
-    <div className="boba-stretch-inside">
+    <div className="boba-stretch-inside flex flex-col gap-8">
       <MajorSegment image={undefined} imageFirst={false}>
         <GlitchyTextOnScroll />
         <div className="relative h-full flex items-center">
@@ -21,16 +19,12 @@ export default function Home() {
             <div className="mr-8">
               <h3>Introducing</h3>
               <h1>boba-ui</h1>
-              <span>By </span>
-              <Underline>
-                <ClickSwitch a={"Joel"} b={"奕諴"} />
-              </Underline>
             </div>
-            <Card>
+            <Card animate={true}>
               <div className="h-full flex flex-col justify-center">
                 <h3>It glows.</h3>
                 <p className="italic text-sm">
-                  That's actually like half of the point of this so I really
+                  That's actually like half of the point so I really
                   hope it does.
                 </p>
               </div>
@@ -38,8 +32,7 @@ export default function Home() {
           </Row>
         </div>
       </MajorSegment>
-      <div className="m-8">
-        <Center>
+      <Center>
           <div className="md:max-w-2xl">
             <span>
               The version of{"  "}
@@ -49,8 +42,7 @@ export default function Home() {
               flavour of boba, just for them!
             </span>
           </div>
-        </Center>
-      </div>
+      </Center>
 
       <BentoRow>
         <MajorSegment image={undefined} imageFirst={false}>
@@ -88,15 +80,17 @@ export default function Home() {
           <div>
             <p>It's flexible.</p>
             <br />
-            <div className="flex flex-col gap-2">
+            <div className="flex flex-col gap-2 boba-stretch-inside">
               <Card>
-                <p>Copy the folder into your project.</p>
+                <p>Option 1: Copy the folder into your project.</p>
               </Card>
               <Card>
-                <p>Fork the repository and manage it yourself</p>
+                <p>
+                  Option 2: Fork the repository and create your own boba flavour
+                </p>
               </Card>
               <Card>
-                <p>Clone the repository into a subfolder</p>
+                <p>Option 3: Clone the repository into a subfolder</p>
               </Card>
               <br />
               <p>
