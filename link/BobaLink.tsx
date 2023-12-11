@@ -1,3 +1,5 @@
+"use client"
+
 import { constants } from "crypto";
 import { motion } from "framer-motion";
 import { HTMLAttributes, useState } from "react";
@@ -12,30 +14,30 @@ function BobaLink(props: BobaLinkProps) {
     const [hovered, setHovered] = useState(false);
 
     return (<>
-        <motion.div
+        <motion.span
             onHoverStart={() => setHovered(true)}
             onHoverEnd={() => setHovered(false)}
 
             className={"relative pb-1 flex items-center w-fit " + (props.disabled ? "line-through " : "")}
         >
             <p>{props.children}</p>
-            <motion.div
+            <motion.span
                 animate={hovered && !props.disabled ? { x: 1, y: -1 } : {}}
             >
                 <IconContext.Provider value={{ size: "1.5em" }}>
                     <GoArrowUpRight />
                 </IconContext.Provider>
-            </motion.div>
+            </motion.span>
 
-            <motion.div
+            <motion.span
                 className="h-1 bg-boba absolute bottom-0"
                 animate={{
                     width: hovered && !props.disabled ? "100%" : "0%",
                 }}
             >
 
-            </motion.div>
-        </motion.div>
+            </motion.span>
+        </motion.span>
 
     </>);
 }
